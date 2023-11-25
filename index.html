@@ -1,29 +1,588 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>MR. БЫТ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+        <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+        <style>
+            * {
+                font-family: "Gilroy-Regular";
+            }
+            .gilroy_bold {
+                font-family: "Gilroy-Bold";
+                font-weight: 900;
+            }
+            *::-webkit-scrollbar {
+                width: 6px;
+            }
+            *::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            *::-webkit-scrollbar-thumb {
+                background: #FED036;
+                border-radius: 10px;
+            }
+            .banner-bg {
+                background-image: url(./assets/banner.png);
+                background-size: cover;
+            }
+            .rgba {
+                border-radius: 3px;
+                background: rgba(255, 255, 255, 0.60);
+                backdrop-filter: blur(2.5px);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <header>
+                <div class="max-w-[1280px] mx-auto flex justify-between py-[20px] px-[20px] md:px-[0]">
+                    <div>
+                        <a href="/"><img src="assets/logo.png" alt="LOGO" /></a>
+                    </div>
+                    <nav>
+                        <ul class="flex justify-between items-center gap-[40px]">
+                            <li class="flex hidden md:flex justify-center items-center gap-[5px]">
+                                <img src="assets/menu-icon.png" alt="menu-icon" />
+                                <a class="hidden md:flex text-[18px]" href="#">Цены на услуги</a>
+                            </li>
+                            <li class="hidden md:flex">
+                                <a class="text-[18px]" href="#">О компании</a>
+                            </li>
+                            <li class="hidden md:flex">
+                                <a class="text-[18px]" href="#">Отзывы</a>
+                            </li>
+                            <li class="hidden md:flex">
+                                <a class="text-[18px]" href="#">Контакты</a>
+                            </li>
+                            <li class="hidden md:flex items-center justify-center gap-[5px]">
+                                <img src="assets/icon-city.png" width="21" height="16" />
+                                <a class="text-[18px]" href="#">Moсква и Подмосковье</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <img class="md:hidden" src="assets/menu-icon.png" alt="menu-icon" />
+                        <p class="hidden md:flex text-[28px] gilroy_bold">8 (495) <span class="gilroy_bold text-[#FED036]">106-52-16</span></p>
+                    </div>
+                </div>
+            </header>
+            <div class="bg-[#FED036] pb-[100px]">
+                <div class="max-w-[1280px] mx-auto flex justify-between flex-col md:flex-row">
+                    <div>
+                        <button class="fixed -left-[85px] top-[425px] rotate-[90deg] bg-[#3C93F0] py-[8px] px-[15px] flex justify-center items-center gap-[10px] text-white text-[12px] font-[700] w-fit rounded-[3px]">
+                            <img src="assets/mask-icon.png" />
+                            МЕРЫ БЕЗОПАСТНОСТИ
+                        </button>
+                        <div class="pt-[30px] md:pt-[150px]">
+                            <h2 class="text-[#3E3E3E] hidden md:flex text-[38px]">БЫСТРО И ПРОСТО</h2>
+                            <h1 class="max-w-[670px] text-white text-[28px] md:text-[68px] mt-[30px] gilroy_bold text-center md:text-start">РЕМОНТ БЫТОВОЙ ТЕХНИКИ</h1>
+                            <h2 class="text-[#3E3E3E] md:hidden md:flex text-center mt-[10px] justify-center flex">БЫСТРО И ПРОСТО</h2>
+                            <p class="mt-[30px] hidden md:flex text-[#3E3E3E] text-[24px] items-center gap-[10px]">
+                                <img src="assets/run-icon.png" />
+                                Выезд мастера от 30 минут
+                            </p>
+                            <div class="hidden md:flex items-center mt-[30px]">
+                                <div class="flex gap-[20px] bg-[#fff] py-[15px] px-[20px] rounded-l-[3px]">
+                                    <div class="flex items-center gap-[5px]">
+                                        <img src="assets/icon-flag-rus.png" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="6" viewBox="0 0 8 6" fill="none">
+                                            <path d="M3.35304 5.07834C3.42099 5.17245 3.53351 5.22857 3.65333 5.22857C3.77316 5.22857 3.88568 5.17245 3.95363 5.07834L7.24153 0.546908C7.31898 0.440246 7.32774 0.301514 7.26454 0.186834C7.20171 0.0721542 7.07713 0 6.94123 0H0.365432C0.229533 0 0.104958 0.0721542 0.041757 0.186834C-0.0214438 0.301514 -0.0123108 0.440246 0.0651376 0.546908L3.35304 5.07834Z" fill="#3E3E3E"/>
+                                        </svg>
+                                    </div>
+                                    <input class="text-[18px]" type="tel" placeholder="+7 (999) 000-00-00" />
+                                </div>
+                                <button class="text-[24px] px-[22px] py-[13px] text-white bg-[#3C93F0] rounded-r-[3px]">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="assets/master.png" />
+                    </div>
+                    <div class="md:hidden flex justify-center items-center">
+                        <p class="flex items-center gap-[12px] py-[18px] px-[35px] bg-[#3C93F0] text-white justify-center rounded-[3px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M14.5668 20C14.5718 20 14.5898 20 14.5948 20C15.1228 20 15.6218 19.792 15.9998 19.414L18.712 16.7018C19.103 16.3108 19.103 15.6788 18.712 15.2878L14.7118 11.2876C14.3208 10.8965 13.6888 10.8965 13.2977 11.2876L11.7037 12.8816C10.9646 12.6616 9.58559 12.1616 8.71156 11.2876C7.83752 10.4135 7.3375 9.03445 7.11749 8.29541L8.71156 6.70134C9.10257 6.31032 9.10257 5.67828 8.71156 5.28726L4.7114 1.28706C4.33639 0.912046 3.67236 0.912046 3.29735 1.28706L0.586239 3.9992C0.206225 4.37922 -0.00778376 4.90125 0.000216553 5.43427C0.0232175 6.85834 0.400232 11.8046 4.29838 15.7028C8.19654 19.601 13.1427 19.977 14.5668 20ZM4.00537 3.40817L6.59147 5.9943L5.29842 7.28736C5.05941 7.52538 4.95741 7.86939 5.02741 8.19941C5.05141 8.31442 5.63844 11.0416 7.2985 12.7016C8.95857 14.3617 11.6857 14.9487 11.8007 14.9727C12.1337 15.0428 12.4747 14.9407 12.7127 14.7017L14.0058 13.4087L16.5919 15.9948L14.5858 17.9999C13.3377 17.9789 9.06757 17.6439 5.71244 14.2877C2.34631 10.9215 2.0203 6.63633 2.00029 5.41327L4.00537 3.40817ZM17.9999 8.99945H20C20 3.86919 16.1268 0 10.9896 0V2.0001C15.0518 2.0001 17.9999 4.94325 17.9999 8.99945Z" fill="white"/>
+                                <path d="M11.2002 5.92001C13.2191 5.92001 14.0802 6.78113 14.0802 8.80001H16.0002C16.0002 5.70402 14.2962 4.00002 11.2002 4.00002V5.92001Z" fill="white"/>
+                            </svg>
+                            Позвонить
+                        </p>
+                        <p class="flex items-center gap-[12px] py-[18px] px-[35px] bg-[#09D743] text-white justify-center rounded-[3px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.086 2.90682C15.2058 1.03334 12.7055 0.001104 10.0422 0C4.55352 0 0.0854133 4.44579 0.0831947 9.91058C0.0831947 11.6571 0.54132 13.3617 1.41209 14.8653L0 20L5.27898 18.6211C6.73433 19.4105 8.3716 19.8267 10.0377 19.8278H10.0422C15.5297 19.8278 19.9978 15.382 20 9.9172C20 7.26982 18.9662 4.7803 17.086 2.90682ZM10.0422 18.1552H10.0388C8.55352 18.1541 7.09706 17.7578 5.82585 17.006L5.52413 16.8271L2.39157 17.6452L3.22684 14.6059L3.0305 14.2945C2.20189 12.983 1.76484 11.4672 1.76484 9.91058C1.76706 5.36874 5.47976 1.67366 10.0455 1.67366C12.2562 1.67476 14.3339 2.53257 15.8968 4.0892C17.4587 5.64694 18.3195 7.71583 18.3184 9.9172C18.3161 14.459 14.6034 18.1552 10.0422 18.1552ZM14.5824 11.985C14.3328 11.8602 13.1104 11.2619 12.8819 11.1791C12.6545 11.0963 12.4892 11.0554 12.3228 11.3027C12.1564 11.55 11.6794 12.1075 11.5341 12.2731C11.3888 12.4387 11.2435 12.4586 10.995 12.335C10.7465 12.2113 9.94454 11.9497 8.9939 11.1062C8.25402 10.4493 7.75485 9.63899 7.60954 9.39059C7.46423 9.14219 7.59401 9.00861 7.71936 8.88496C7.83139 8.77456 7.96783 8.59572 8.09207 8.45109C8.21631 8.30647 8.25735 8.2038 8.34054 8.0382C8.42374 7.8726 8.3827 7.72797 8.31947 7.60433C8.25735 7.47958 7.75929 6.26076 7.55186 5.76507C7.35108 5.28483 7.14587 5.34886 6.99279 5.34224C6.84859 5.33562 6.6822 5.33341 6.51692 5.33341C6.35053 5.33341 6.08098 5.39523 5.85247 5.64253C5.62396 5.89093 4.9817 6.48929 4.9817 7.7081C4.9817 8.92692 5.87354 10.1049 5.99778 10.2705C6.12202 10.4361 7.75264 12.9366 10.2485 14.0097C10.843 14.2647 11.3067 14.4171 11.6672 14.5319C12.2629 14.7207 12.8053 14.6931 13.2346 14.6302C13.7127 14.5595 14.7066 14.0318 14.914 13.4533C15.1215 12.8748 15.1215 12.3791 15.0593 12.2753C14.9972 12.1716 14.8297 12.1086 14.5824 11.985Z" fill="white"/>
+                            </svg>
+                            WhatsApp
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <section class="mt-[75px] max-w-[1280px] mx-auto">
+                <div class="relative">
+                    <h1 class="text-[28px] md:text-[48px] gilroy-bold font-[900] text-center text-[#3E3E3E]">Чем мы поможем?</h1>
+                    <img class="hidden md:flex absolute top-[0px] right-[0px]" src="assets/widget-call-button.png" />
+                </div>
+                <p class="mt-[20px] text-[12px] md:text-[24px] text-[#3E3E3E] text-center">
+                    Приоритетным направлением деятельности нашей компании является ремонт бытовой техники на дому.
+                </p>
+                <div class="flex justify-center mt-[20px]">
+                    <img src="assets/icon-down-arrow.png" />
+                </div>
+                <div class="mt-[30px] flex justify-between flex-col md:flex-row items-center gap-[20px] md:gap[0]">
+                    <div class="pt-[30px] pl-[30px] pr-[10px] bg-[#EDF3F6]">
+                        <h1 class="text-[24px] gilroy-bold font-[900] text-[#3E3E3E]">Ремонт стиральных машин</h1>
+                        <div class="flex justify-between items-end gap-[40px]">
+                            <div class="mt-[40px]">
+                                <div class="gap-[7px] flex flex-col items-start">
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Не сливает</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Долго стирает</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Протекает</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Не отжимает</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Не влючается</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Сильно шумит</span>
+                                    </p>
+                                </div>
+                                <button class="mt-[40px] flex items-center gap-[10px] text-[#3C93F0] text-[14px] font-[600] mb-[30px]">
+                                    подробнее
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="9"
+                                        height="9"
+                                        viewBox="0 0 9 9"
+                                        fill="none"
+                                    >
+                                    <path
+                                        d="M9 4.5L4.15385 0V3.75H0V5.25H4.15385V9L9 4.5Z"
+                                        fill="#3C93F0"
+                                    />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="mt-[20px]">
+                                <img src="assets/wash.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-[30px] pl-[30px] pr-[10px] bg-[#EDF3F6]">
+                        <h1 class="text-[24px] gilroy-bold font-[900] text-[#3E3E3E]">Ремонт стиральных машин</h1>
+                        <div class="flex justify-between items-end gap-[40px]">
+                            <div class="mt-[40px]">
+                                <div class="gap-[7px] flex flex-col items-start">
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Не морозит</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Гудит и шумит</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Не отключается</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Вода внутри</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Не холодит</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Намерзает лед</span>
+                                    </p>
+                                </div>
+                                <button class="mt-[40px] flex items-center gap-[10px] text-[#3C93F0] text-[14px] font-[600] mb-[30px]">
+                                    подробнее
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="9"
+                                        height="9"
+                                        viewBox="0 0 9 9"
+                                        fill="none"
+                                    >
+                                    <path
+                                        d="M9 4.5L4.15385 0V3.75H0V5.25H4.15385V9L9 4.5Z"
+                                        fill="#3C93F0"
+                                    />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="mt-[20px]">
+                                <img src="assets/fridge.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-[30px] pl-[30px] pr-[10px] bg-[#EDF3F6]">
+                        <h1 class="text-[24px] gilroy-bold font-[900] text-[#3E3E3E]">Ремонт стиральных машин</h1>
+                        <div class="flex justify-between items-end gap-[40px]">
+                            <div class="mt-[40px]">
+                                <div class="gap-[7px] flex flex-col items-start">
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Плохо моет</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Не набирает</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Отключается</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Не сливает</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Течет</span>
+                                    </p>
+                                    <p class="flex flex-row">
+                                        <span class="mt-[7px] w-[7px] h-[7px] rounded-[1px] bg-[#3C93F0] mr-[10px]"></span> 
+                                        <span class="text-[14px]">Не светится</span>
+                                    </p>
+                                </div>
+                                <button class="mt-[40px] flex items-center gap-[10px] text-[#3C93F0] text-[14px] font-[600] mb-[30px]">
+                                    подробнее
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="9"
+                                        height="9"
+                                        viewBox="0 0 9 9"
+                                        fill="none"
+                                    >
+                                    <path
+                                        d="M9 4.5L4.15385 0V3.75H0V5.25H4.15385V9L9 4.5Z"
+                                        fill="#3C93F0"
+                                    />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="mt-[20px]">
+                                <img src="assets/dryer.png" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <div class="mt-[70px] max-w-[1280x] mx-auto">
+                    <h1 class="text-[28px] md:text-[48px] gilroy-bold font-[900] text-center text-[#3E3E3E]" >Хорошие мастера у нас?</h1>
+                    <div class="max-w-[1280px] mx-auto">
+                        <p class="mt-[20px] text-[12px] md:text-[24px] text-[#3E3E3E] text-center">
+                            Наши жесткие критерии отбора мастеров позволяют держать качество ремонта на высшем уровне и оставлять гарантию.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-[20px]">
+                    <img src="assets/icon-down-arrow.png" />
+                </div>
+                <section class="mt-[60px] max-w-[1280px] mx-auto flex justify-between items-center gap-[30px]">
+                    <div class="md:flex hidden justify-between relative items-center bg-[#EDF3F6] rounded-[3px] py-[30px] px-[35px] w-fit md:pr-[350px]">
+                        <div>
+                            <div class="flex items-center gap-[10px]">
+                                <div class="bg-[#09D743] w-[5px] h-[35px]"></div>
+                                <div>
+                                    <h2 class="text-[18px] text-[#3E3E3E] font-[800]">
+                                        ПОДБЕРЕМ БЛИЖАЙШЕГО МАСТЕРА
+                                    </h2>
+                                    <span class="text-[13px] text-[#3E3E3E]">
+                                        Введите ваш адрес, и узнайте где ближайший наш мастер. И рассчет
+                                        время прибытия.
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center mt-[20px]">
+                                    <div class="flex gap-[20px] bg-[#fff] py-[15px] px-[20px] rounded-l-[3px]">
+                                        <input class="text-[18px]" type="text" placeholder="Введите адрес.." />
+                                    </div>
+                                    <button class="text-[24px] px-[22px] py-[13px] text-white bg-[#3C93F0] rounded-r-[3px]">Проверить</button>
+                                </div>
+                                <p class="mt-[10px] flex items-center gap-[5px] text-[11px]"><input type="checkbox" name="" id=""> Нажимая на кнопку "Проверить", я даю свое согласие на обработку своих персональных данных.</p>
+                            </div>
+                        </div>
+                        <img class="absolute w-[300px] hidden md:block right-[50px] -top-[75px]" src="assets/image-metr.png" />
+                    </div>
+                    <div class="flex items-center px-[20px] md:px-[0]">
+                        <div class="flex flex-col items-start">
+                            <div class="flex items-center gap-[8px]">
+                                <img src="assets/bx-check-circle.svg.png" />
+                                <p class="text-[14px] text-[#3E3E3E] font-[700]">Проверям документы</p>
+                            </div>
+                            <div class="flex items-center gap-[8px]">
+                                <img src="assets/bx-check-circle.svg.png" />
+                                <p class="text-[14px] text-[#3E3E3E] font-[700]">Только граждане РФ</p>
+                            </div>
+                            <div class="flex items-center gap-[8px]">
+                                <img src="assets/bx-check-circle.svg.png" />
+                                <p class="text-[14px] text-[#3E3E3E] font-[700]">Подтвежденные сертификаты</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="assets/image-docs.png" />
+                        </div>
+                    </div>
+                </section>
+                <section class="mt-[50px] max-w-[1280px] mx-auto flex justify-between items-center gap-[20px] flex-col md:flex-row">
+                    <div class="flex justify-between items-center">
+                        <div class="border border-[#EDF3F6] w-fit pt-[10px] w-fit">
+                            <div class="flex items-center justify-center px-[25px]">
+                                <div>
+                                    <h1 class="text-[28px] font-[700] text-[#3E3E3E]">Олег Самсонов</h1>
+                                    <div class="w-[80px] mt-[10px] bg-[#09D743] h-[5px]"></div>
+                                    <h3 class="mt-[10px] text-[18px] font-[700] text-[#3E3E3E]">7 лет опыта</h3>
+                                    <p class="max-w-[160px] text-[14px] mt-[15px] text-[#3E3E3E]">Мастер по ремонту стиральным машин и посудомоечных машин</p>
+                                </div>
+                                <div>
+                                    <img class="h-[280px] object-cover w-[180px]" src="assets/man1.png" />
+                                </div>
+                            </div>
+                            <div class="bg-[#EDF3F6] flex gap-[10px] items-start p-[20px]">
+                                <img src="assets/quote.png" />
+                                <p class="max-w-[300px] text-[14px]">
+                                    Занимаюсь ремонтом стиральных машин уже 7 лет, потому что решил
+                                    когда-то почить свою. Отучился на профильном курсе в иституте
+                                    М.И. Баумана.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="border border-[#EDF3F6] w-fit pt-[10px] w-fit">
+                            <div class="flex items-center justify-center px-[25px]">
+                                <div>
+                                    <h1 class="text-[28px] font-[700] text-[#3E3E3E]">Олег Самсонов</h1>
+                                    <div class="w-[80px] mt-[10px] bg-[#09D743] h-[5px]"></div>
+                                    <h3 class="mt-[10px] text-[18px] font-[700] text-[#3E3E3E]">7 лет опыта</h3>
+                                    <p class="max-w-[160px] text-[14px] mt-[15px] text-[#3E3E3E]">Мастер по ремонту стиральным машин и посудомоечных машин</p>
+                                </div>
+                                <div>
+                                    <img class="h-[280px] object-cover w-[180px]" src="assets/man2.png" />
+                                </div>
+                            </div>
+                            <div class="bg-[#EDF3F6] flex gap-[10px] items-start p-[20px]">
+                                <img src="assets/quote.png" />
+                                <p class="max-w-[300px] text-[14px]">
+                                    Занимаюсь ремонтом стиральных машин уже 7 лет, потому что решил
+                                    когда-то почить свою. Отучился на профильном курсе в иституте
+                                    М.И. Баумана.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="border border-[#EDF3F6] w-fit pt-[10px] w-fit">
+                            <div class="flex items-center justify-center px-[25px]">
+                                <div>
+                                    <h1 class="text-[28px] font-[700] text-[#3E3E3E]">Олег Самсонов</h1>
+                                    <div class="w-[80px] mt-[10px] bg-[#09D743] h-[5px]"></div>
+                                    <h3 class="mt-[10px] text-[18px] font-[700] text-[#3E3E3E]">7 лет опыта</h3>
+                                    <p class="max-w-[160px] text-[14px] mt-[15px] text-[#3E3E3E]">Мастер по ремонту стиральным машин и посудомоечных машин</p>
+                                </div>
+                                <div>
+                                    <img class="h-[280px] object-cover w-[180px]" src="assets/man3.png" />
+                                </div>
+                            </div>
+                            <div class="bg-[#EDF3F6] flex gap-[10px] items-start p-[20px]">
+                                <img src="assets/quote.png" />
+                                <p class="max-w-[300px] text-[14px]">
+                                    Занимаюсь ремонтом стиральных машин уже 7 лет, потому что решил
+                                    когда-то почить свою. Отучился на профильном курсе в иституте
+                                    М.И. Баумана.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mt-[100px] max-w-[1280px] mx-auto">
+                    <div>
+                        <h1 class="text-[28px] md:text-[48px] gilroy-bold font-[900] text-center text-[#3E3E3E]">Что о нас говорят?</h1>
+                        <p class="mt-[20px] text-[12px] md:text-[24px] text-[#3E3E3E] text-center">
+                            О качестве работ компании говорят ее клиенты. Изучить мнение наших заказчиков вы можете ниже или в сервисах Google, Яндекс. Нам есть, чем гордиться!
+                        </p>
+                    </div>
+                    <div class="flex justify-center mt-[20px]">
+                        <img
+                            src="assets/icon-down-arrow.png"
+                        />
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-[20px] mt-[30px]">
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                        <img src="assets/customer.png" />
+                    </div>
+                    <div class="flex justify-between items-center flex-col dm:flex-row gap-[20px] md:gap-[0] mt-[20px]">
+                        <div>
+                            <button class="text-[14px] py-[18px] px-[40px] text-white font-[700] rounded-[3px] bg-[#3C93F0]">Смотреть все отзывы</button>
+                        </div>
+                        <div class="flex justify-end items-center flex-col md:flex-row gap-[15px]">
+                            <div class="border border-[#EDF3F6] rounded-[3px] flex justify-between items-center px-[25px] gap-[25px]">
+                                <div class="flex items-center gap-[15px]">
+                                    <img src="assets/rating.png" />
+                                    <div>
+                                        <img src="assets/rating (1).png" />
+                                        <p class="text-[12px] text-[#878787]"><span class="font-700">Рейтинг <br></span> по отзывам в</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <img src="assets/Yandex_logo_2021_Russian 1.png" />
+                                    <p class="text-[12px] text-[#878787]">125 оценок</p>
+                                </div>
+                            </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
-</head>
+                            <div class="border border-[#EDF3F6] rounded-[3px] flex justify-between items-center px-[25px] gap-[25px]">
+                                <div class="flex items-center gap-[15px]">
+                                    <img src="assets/rating.png" />
+                                    <div>
+                                        <img src="assets/rating (1).png" />
+                                        <p class="text-[12px] text-[#878787]"><span class="font-700">Рейтинг <br></span> по отзывам в</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <img src="assets/google-logo.png" />
+                                    <p class="text-[12px] text-[#878787]">355 оценок</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mt-[100px] max-w-[1280px] mx-auto">
+                    <div>
+                        <h1 class="text-[28px] md:text-[48px] gilroy-bold font-[900] text-center text-[#3E3E3E]">Почему выбирают нас?</h1>
+                        <p class="mt-[20px] text-[12px] md:text-[24px] text-[#3E3E3E] text-center">
+                            Наши премущества, помогают нам удерживать лидирующие позиции на
+                            рынке услуг по ремонту бытовой техники.
+                        </p>
+                    </div>
+                    <div class="flex justify-center mt-[20px]">
+                        <img
+                            src="assets/icon-down-arrow.png"
+                            style="margin-bottom: 50px"
+                        />
+                    </div>
+                    <div class="mt-[30px] flex justify-between items-center flex-col md:flex-row">
+                        <div class="flex flex-col items-center gap-[10px]">
+                            <div>
+                                <h4 class="text-[18px] text-[#3E3E3E] font-[700]">Будем в течении 30 минут</h4>
+                            </div>
+                            <div class="flex justify-between w-fit items-center relative gap-[15px] bg-[#EDF3F6] py-[30px] pl-[25px] pr-[180px]">
+                                <div class="w-[5px] h-[35px] bg-[#09D743]"></div>
+                                <p class="text-[#3E3E3E] text-[14px] max-w-[180px]">
+                                    У нас более 150 мастеров в 125 районах Москвы, что позволяет
+                                    обработать заказ в кратчайшие сроки.
+                                </p>
+                                <img src="assets/clock.png" alt="img" class="absolute -top-[35px] right-[30px]" />
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center gap-[10px]">
+                            <div>
+                                <h4 class="text-[18px] text-[#3E3E3E] font-[700]">Оригинальные запчасти</h4>
+                            </div>
+                            <div class="flex justify-between w-fit items-center relative gap-[15px] bg-[#EDF3F6] py-[30px] pl-[25px] pr-[180px]">
+                                <div class="w-[5px] h-[35px] bg-[#09D743]"></div>
+                                <p class="text-[#3E3E3E] text-[14px] max-w-[180px]">
+                                    Подбираем и используем комплетующие только авторизированых от брендов поставщиков.
+                                </p>
+                                <img src="assets/gear.png" alt="img" class="absolute -top-[8px] right-[30px]" />
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center gap-[10px]">
+                            <div>
+                                <h4 class="text-[18px] text-[#3E3E3E] font-[700]">Подарок каждому клиенту</h4>
+                            </div>
+                            <div class="flex justify-between w-fit items-center relative gap-[15px] bg-[#EDF3F6] py-[30px] pl-[25px] pr-[180px]">
+                                <div class="w-[5px] h-[35px] bg-[#09D743]"></div>
+                                <p class="text-[#3E3E3E] text-[14px] max-w-[180px]">
+                                    Каждому клиенту производившиму ремонт, дарим атибактериальную обработку техники. 
+                                </p>
+                                <img src="assets/gift.png" alt="img" class="absolute -top-[35px] right-[30px]" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="banner-bg py-[100px] px-[25px] mt-[65px] max-w-[1280px] mx-auto flex justify-between items-center flex-col md:flex-row">
+                    <div class="hidden md:block">
+                        <div class="rgba w-fit rounded-[3px] py-[30px] px-[35px]">
+                            <h1 class="text-[#3E3E3E] text-[28px] gilroy-bold font-[900]">Меня зовут Дмитрий Соколов</h1>
+                            <p class="text-[#3E3E3E] text-[28px] gilroy-bold">и мы гордимся, что уже 20 лет</p>
 
-<body>
-    <header class="header">
-        <nav class="header__nav container">
-            <a href="#" class="header__nav-logo"><img src="./images/logo.svg" alt="logo"></a>
-            <ul class="header__nav-list">
-                <li class="nav__list-item"><span class="list__item-icon"><img src="./images/menu-button.svg"
-                            alt="menu-button"></span> <a href="#" class="list__item-link">Цены на услуги</a></li>
-                <li class="nav__list-item"><a href="#" class="list__item-link">О компании</a></li>
-                <li class="nav__list-item"><a href="#" class="list__item-link">Отзывы</a></li>
-                <li class="nav__list-item"><a href="#" class="list__item-link">Контакты</a></li>
-                <li class="nav__list-item popup-item"><span class="list__item-icon "><img
-                            src="./images/select-button.svg " alt="menu-button"><a href="#" class="list__item-link">Moсква и Подмосковье</a></li>
-            </ul>
-            <a class="header__nav-link" href="tel:234576">8 (495) 106-52-16</a>
-        </nav>
-    </header>
-</body>
+                            <p class="text-[18px] text-[#3E3E3E] mt-[10px] max-w-[380px]">обслуживаем все виды бытовой техники в Москве и Московской области</p>
 
+                            <p class="text-[18px] text-[#3E3E3E] mt-[10px] max-w-[380px]"><span class="font-[900]">Соблюдаем нормы</span> и <span class="font-[900]">работаем строго по бизнес процессам</span>, позволяющим нам исключать ошибки в ремонте.</p>
+
+                            <p class="text-[18px] text-[#3E3E3E] mt-[10px] max-w-[380px]">Имеем все необходимые <span class="font-[900]">сертификаты и лицензии.</span></p>
+                        </div>
+                        <div class="mt-[40px] px-[20px] flex justify-start items-center gap-[10px]">
+                            <img src="./assets/serf1.png" alt="1">
+                            <img src="./assets/serf2.png" alt="1">
+                            <img src="./assets/serf3.png" alt="1">
+                            <img src="./assets/serf4.png" alt="1">
+                        </div>
+                    </div>
+                    <div class="order-[1] md:order-[0]">
+                        <img src="./assets/master-gift.png" alt="">
+                    </div>
+                    <div class="rounded-[3px] order-[0 md:order-[1] bg-white py-[20px] px-[55px] md:px-[22px] md:w-[280px]">
+                        <h1 class="text-[#3E3E3E] text-[28px] font-[900] text-center">Начнем</h1>
+                        <p class="mt-[15px] text-[#3E3E3E] text-center">С подробного описания наших услуг и их рассценками</p>
+                        <img class="mt-[15px]" src="./assets/OSPZFJ1 1.png" alt="serfiticate">
+                        <p class="mt-[15px] text-[#3E3E3E] text-[14px] text-center">Мы открыты к диалогу и всегда сможем найти общий язык</p>
+                        <div class="mt-[15px] py-[12px] w-full justify-center rounded-[3px] bg-[#FED036] flex items-center gap-[8px]"><img src="./assets/icon_download.png" alt=""><p class="text-[#3E3E3E] text-[12px]">Скачать прайслист</p></div>
+                    </div>
+                </section>
+                <footer class="bg-[#3E3E3E] py-[33px]">
+                    <div class="max-w-[1280px] mx-auto flex flex-col items-center">
+                        <div>
+                            <p class="text-[28px] text-center text-white gilroy_bold">8 (495) <span class="gilroy_bold text-[#FED036]">106-52-16</span></p>
+                        </div>
+                        <a class="flex items-center gap-[10px] mt-[10px] text-[#FED036] underline" href="#"><img src="assets/icon-mail.png" />order@mrappiliance.ru</a>
+                        <h5 class="mt-[10px] text-white">ИНН 2003922 / ОГРН 21002494911</h5>
+                        <a href="#" class="text-[#FED036] underline mt-[10px] text-center">Политика конфиденциальности и обработки персональных данных.</a>
+                        <h5 class="mt-[10px] text-white mt-[10px]">2021 © Мистер Быт</h5>
+                        <h4 class="text-[#EDF3F6] mt-[10px] text-center">
+                            Представленная на сайте информация, касающаяся сроков, стоимости и
+                            порядка предоставления услуг, носит информационный характер и ни при
+                            каких условиях не является публичной офертой, определяемой положениями
+                            Статьи 437(2) Гражданского кодекса РФ.
+                        </h4>
+                    </div>
+                </footer>
+            </div>
+    </body>
 </html>
